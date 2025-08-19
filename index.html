@@ -1,145 +1,155 @@
-<!DOCTYPE html>
+label>
+      <select id="state" name="state" required>
+        <option value="">Select yo<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All India Weavers Federation - Registration Form</title>
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All India Weavers Federation - Registration Form</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        body {
-            background-image: url('images/WhatsApp Image 2025-08-18 at 2.09.11 PM.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+    body {
+      background-image: url('images/WhatsApp Image 2025-08-18 at 2.09.11 PM.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-        .overlay {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-color: rgba(0,0,0,0.5);
-            z-index: 1;
-        }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
 
-        .container {
-            position: relative;
-            z-index: 2;
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 30px 40px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-        }
+    .container {
+      position: relative;
+      z-index: 2;
+      background: url('images/weavers.png') no-repeat center center / cover;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      color: #333;
+    }
 
-        .logo {
-            max-width: 200px;
-            height: auto;
-            margin-bottom: 20px;
-        }
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(255,255,255,0.85); /* overlay so form stays readable */
+      border-radius: 10px;
+      z-index: -1;
+    }
 
-        h2 {
-            text-align: center;
-            color: #1e90ff;
-            margin-bottom: 20px;
-        }
+    .logo {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
 
-        form {
-            display: flex;
-            flex-direction: column;
-        }
+    h2 {
+      text-align: center;
+      color: #1e90ff;
+      margin-bottom: 20px;
+    }
 
-        label {
-            margin-bottom: 5px;
-            font-weight: bold;
-            text-align: left;
-        }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
 
-        input, select, textarea {
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      text-align: left;
+      color: #333;
+    }
 
-        textarea {
-            resize: vertical;
-        }
+    input, select, textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #fff;
+    }
 
-        button {
-            padding: 12px;
-            background-color: #1e90ff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    textarea {
+      resize: vertical;
+    }
 
-        button:hover {
-            background-color: #0f78d1;
-        }
-    </style>
+    button {
+      padding: 12px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0f78d1;
+    }
+  </style>
 </head>
 <body>
-    <div class="overlay"></div>
-    <div class="container">
-        <img src="logo.png" alt="Federation Logo" class="logo">
-        <h2>All India Weavers Federation</h2>
-        <form action="#" method="post" onsubmit="return showMessage()">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+  <div class="overlay"></div>
+  <div class="container">
+    <img src="images/logo.png" alt="Federation Logo" class="logo">
+    <h2>All India Weavers Federation</h2>
+    <form action="#" method="post" onsubmit="return showMessage()">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
 
-            <label for="state">State</label>
-            <select id="state" name="state" required>
-                <option value="">Select your state</option>
-                <option value="andhra-pradesh">Andhra Pradesh</option>
-                <option value="telangana">Telangana</option>
-                <option value="karnataka">Karnataka</option>
-                <option value="kerala">Kerala</option>
-                <option value="tamil-nadu">Tamil Nadu</option>
-                <option value="maharashtra">Maharashtra</option>
-                <option value="gujarat">Gujarat</option>
-                <option value="uttar-pradesh">Uttar Pradesh</option>
-                <option value="west-bengal">West Bengal</option>
-                </select>
+      <label for="state">State</ur state</option>
+        <option value="andhra-pradesh">Andhra Pradesh</option>
+        <option value="telangana">Telangana</option>
+        <option value="karnataka">Karnataka</option>
+        <option value="kerala">Kerala</option>
+        <option value="tamil-nadu">Tamil Nadu</option>
+        <option value="maharashtra">Maharashtra</option>
+        <option value="gujarat">Gujarat</option>
+        <option value="uttar-pradesh">Uttar Pradesh</option>
+        <option value="west-bengal">West Bengal</option>
+      </select>
 
-            <label for="weaving-type">Type of Weaving / Craft</label>
-            <input type="text" id="weaving-type" name="weaving-type" placeholder="E.g., Handloom, Ikat, Banarasi">
+      <label for="weaving-type">Type of Weaving / Craft</label>
+      <input type="text" id="weaving-type" name="weaving-type" placeholder="E.g., Handloom, Ikat, Banarasi">
 
-            <label for="message">Additional Information</label>
-            <textarea id="message" name="message" rows="4" placeholder="Enter any additional details"></textarea>
+      <label for="message">Additional Information</label>
+      <textarea id="message" name="message" rows="4" placeholder="Enter any additional details"></textarea>
 
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 
-    <script>
-        function showMessage() {
-            alert("Form submitted successfully!");
-            // The 'return false;' prevents the form from actually submitting to a server,
-            // which would cause the 405 error.
-            return false;
-        }
-    </script>
+  <script>
+    function showMessage() {
+      alert("Form submitted successfully!");
+      return false; // prevent real submission
+    }
+  </script>
 </body>
 </html>
